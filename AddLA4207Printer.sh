@@ -17,6 +17,8 @@ pharosPath="/Library/Application Support/Pharos"
 if [ ! -d "$pharosPath" ]; then
     echo "Directory $pharosPath not found. Please make sure the Pharos software is properly installed."
     exit 1
+else
+    echo "Pharos software found. Continuing with printer installation..."
 fi
 
 # Add Printer
