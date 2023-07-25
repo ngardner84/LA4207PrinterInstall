@@ -4,6 +4,7 @@
 printerLocation="LA4207"
 printerDescription="Pharos Printer"
 printerModel="HP LaserJet Series PCL 4/5"
+printerAddress="10.32.180.109"
 
 # Path to the PPD file in CUPS directory
 ppdFilePath="drv:///sample.drv/laserjet.ppd"
@@ -21,14 +22,11 @@ fi
 
 # Check the input parameter
 if [ "$1" == "1" ]; then
-    printerName="LA4207Printer"
-    printerAddress="10.32.180.109"
+    printerName="LA4_102_Printer"
 elif [ "$1" == "2" ]; then
-    printerName="LA4208Printer"
-    printerAddress="10.32.180.110"
+    printerName="LA4 107 Printer"
 elif [ "$1" == "3" ]; then
-    printerName="LA4209Printer"
-    printerAddress="10.32.180.111"
+    printerName="LA4207Printer"
 else
     echo "Invalid printer selection. Please use 1, 2, or 3."
     exit 1
