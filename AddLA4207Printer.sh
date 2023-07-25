@@ -1,10 +1,8 @@
 #!/bin/bash
 
 # Variables
-printerName="LA4207Printer"
-printerAddress="10.32.180.109"
 printerLocation="LA4207"
-printerDescription="LA4207Printer"
+printerDescription="Pharos Printer"
 printerModel="HP LaserJet Series PCL 4/5"
 
 # Path to the PPD file in CUPS directory
@@ -19,6 +17,21 @@ if [ ! -d "$pharosPath" ]; then
     exit 1
 else
     echo "Pharos software found. Continuing with printer installation..."
+fi
+
+# Check the input parameter
+if [ "$1" == "1" ]; then
+    printerName="LA4207Printer"
+    printerAddress="10.32.180.109"
+elif [ "$1" == "2" ]; then
+    printerName="LA4208Printer"
+    printerAddress="10.32.180.110"
+elif [ "$1" == "3" ]; then
+    printerName="LA4209Printer"
+    printerAddress="10.32.180.111"
+else
+    echo "Invalid printer selection. Please use 1, 2, or 3."
+    exit 1
 fi
 
 # Add Printer
