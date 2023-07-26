@@ -23,20 +23,17 @@ fi
 # Check the input parameter
 if [ "$1" == "1" ]; then
     printerName="LA4_102_Printer"
-    printerURL="LA4_102_Printer"
 elif [ "$1" == "2" ]; then
-    printerName="LA4 107 Printer"
-    printerURL="LA4%20107%20Printer"
+    printerName="LA4%20107%20Printer"
 elif [ "$1" == "3" ]; then
     printerName="LA4207Printer"
-    printerURL="LA4207Printer"
 else
     echo "Invalid printer selection. Please use 1, 2, or 3."
     exit 1
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"$printerURL" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"$printerName" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
