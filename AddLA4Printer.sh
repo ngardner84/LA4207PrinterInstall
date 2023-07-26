@@ -23,10 +23,17 @@ fi
 # Check the input parameter
 if [ "$1" == "1" ]; then
     printerName="LA4_102_Printer"
+    printerDescription="LA4 102 Printer"
+    printerLocation="LA4 102"
+    
 elif [ "$1" == "2" ]; then
     printerName="LA4 107 Printer"
+    printerDescription="LA4 107 Printer"
+    printerLocation="LA4 107"
 elif [ "$1" == "3" ]; then
     printerName="LA4207Printer"
+    printerDescription="LA4 207 Printer"
+    printerLocation="LA4 207"
 else
     echo "Invalid printer selection. Please use 1, 2, or 3."
     exit 1
