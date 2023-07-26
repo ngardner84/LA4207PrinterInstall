@@ -24,7 +24,7 @@ fi
 if [ "$1" == "1" ]; then
     printerName="LA4_102_Printer"
 elif [ "$1" == "2" ]; then
-    printerName="LA4%20107%20Printer"
+    printerName="LA4 107 Printer"
 elif [ "$1" == "3" ]; then
     printerName="LA4207Printer"
 else
