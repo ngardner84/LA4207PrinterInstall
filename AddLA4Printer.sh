@@ -27,7 +27,7 @@ if [ "$1" == "1" ]; then
     printerLocation="LA4 102"
     
 elif [ "$1" == "2" ]; then
-    printerName="LA4 107 Printer"
+    printerName='LA4 107 Printer'
     printerDescription="LA4 107 Printer"
     printerLocation="LA4 107"
 elif [ "$1" == "3" ]; then
@@ -40,7 +40,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v popup://"$printerAddress"/""$printerName"" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"$printerName" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
