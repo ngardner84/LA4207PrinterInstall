@@ -27,7 +27,7 @@ if [ "$1" == "1" ]; then
     printerLocation="LA4 102"
     
 elif [ "$1" == "2" ]; then
-    printerName='LA4\ 107\ Printer'
+    printerName='LA4_107_Printer'
     printerDescription="LA4 107 Printer"
     printerLocation="LA4 107"
 elif [ "$1" == "3" ]; then
