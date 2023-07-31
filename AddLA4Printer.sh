@@ -40,7 +40,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"$printerName" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"${printerName}" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
