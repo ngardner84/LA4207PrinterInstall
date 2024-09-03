@@ -9,25 +9,14 @@ printerAddress="10.32.180.109"
 # Path to the PPD file in CUPS directory
 ppdFilePath="drv:///sample.drv/laserjet.ppd"
 
-# Path to check
-pharosPath="/Library/Application Support/Pharos"
-
-# Check if Pharos directory exists
-if [ ! -d "$pharosPath" ]; then
-    echo "Directory $pharosPath not found. Please make sure the Pharos software is properly installed."
-    exit 1
-else
-    echo "Pharos software found. Continuing with printer installation..."
-fi
-
 # Check the input parameter
 if [ "$1" == "1" ]; then
-    printerName="LA4_102_Printer"
+    printerName="LA4102Printer"
     printerDescription="LA4 102 Printer"
     printerLocation="LA4 102"
     
 elif [ "$1" == "2" ]; then
-    printerName='LA4_107_Printer'
+    printerName='LA4107Printer'
     printerDescription="LA4 107 Printer"
     printerLocation="LA4 107"
 elif [ "$1" == "3" ]; then
@@ -40,7 +29,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v popup://"$printerAddress"/"$printerName" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v smb://"$printerAddress"/"$printerName" -m "$ppdFilePath" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
