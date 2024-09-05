@@ -14,7 +14,7 @@ if [ "$1" == "1" ]; then
     printerName="LA4102Printer"
     printerDescription="LA4 102 Printer"
     printerLocation="LA4 102"
-    printerAddress="10.32.191.198"  # New IP for printer 1
+    printerAddress="10.33.191.198"  # New IP for printer 1
 
 elif [ "$1" == "2" ]; then
     printerName='LA4107Printer'
@@ -26,7 +26,7 @@ elif [ "$1" == "3" ]; then
     printerName="LA4207Printer"
     printerDescription="LA4 207 Printer"
     printerLocation="LA4 207"
-    printerAddress="10.32.191.246"  # New IP for printer 3
+    printerAddress="10.33.191.246"  # New IP for printer 3
 
 else
     echo "Invalid printer selection. Please use 1, 2, or 3."
