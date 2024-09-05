@@ -34,7 +34,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v "ipp://$serverAddress/$printerAddress" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v "ipp://$serverAddress/$printerAddress/ipp/print" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
