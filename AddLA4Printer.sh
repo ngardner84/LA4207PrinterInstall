@@ -4,6 +4,7 @@
 printerLocation="LA4207"
 printerDescription="Network Printer"
 printerModel="HP LaserJet Series PCL 4/5"
+serverAddress="10.32.180.109"
 
 # Path to the PPD file in CUPS directory
 # ppdFilePath="drv:///sample.drv/laserjet.ppd"
@@ -33,7 +34,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v "ipp://$printerAddress" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v "ipp://$serverAddress/$printerName" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
