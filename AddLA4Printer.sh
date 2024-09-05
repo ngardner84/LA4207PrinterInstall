@@ -20,7 +20,7 @@ elif [ "$1" == "2" ]; then
     printerName='LA4107Printer'
     printerDescription="LA4 107 Printer"
     printerLocation="LA4 107"
-    printerAddress="10.32.183.23"  # New IP for printer 2
+    printerAddress="10.33.191.232"  # New IP for printer 2
 
 elif [ "$1" == "3" ]; then
     printerName="LA4207Printer"
@@ -34,7 +34,8 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerName" -E -v "ipp://$serverAddress/$printerAddress/ipp/print" -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v "ipp://$printerAddress/ipp/print" -D "$printerDescription" -L "$printerLocation"
+#lpadmin -p "$printerName" -E -v smb://$2:$3@"$serverAddress"/"$printerName" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
 lpoptions -d "$printerName"
