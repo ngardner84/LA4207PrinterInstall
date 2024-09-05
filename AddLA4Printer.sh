@@ -34,7 +34,7 @@ else
 fi
 
 # Add Printer
-lpadmin -p "$printerDescription" -E -v "ipp://$printerAddress/ipp/print" -m everywhere -D "$printerDescription" -L "$printerLocation"
+lpadmin -p "$printerName" -E -v "ipp://$printerAddress/ipp/print" -m everywhere -D "$printerDescription" -L "$printerLocation"
 #lpadmin -p "$printerName" -E -v smb://$2:$3@"$serverAddress"/"$printerName" -D "$printerDescription" -L "$printerLocation"
 
 # Set as Default
